@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    position: relative;
+    overflow: hidden;
+}
+
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(214, 192, 192);
+
+}
+#page2{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(214, 192, 192);
+
+}
+#page3{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(214, 192, 192);
+
+}
+#page4{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(93, 179, 145);
+
+}
+#page5{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(93, 179, 145);
+
+}
+#page6{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(93, 179, 145);
+
+}
+
+canvas{
+    max-width: 100vw;
+    max-height: 100vh;
+    position: relative;
+    z-index: 9;
+}
+
+#loop{
+    position: absolute;
+    top: 10%;
+    font-size: 65px;
+    width: 100%;
+    white-space: nowrap;
+    color:#e0e0e0;
+    background-color: rgb(214, 192, 192);
+   
+}
+
+#loop>h1{
+    animation-name: anim;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+#loop>h1>span{
+    -webkit-text-stroke: 1px #000;
+    color: #e0e0e0;
+}
+
+@keyframes anim {
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/* ---------------------------------navbar--------------------------- */
+#nav{
+    height: 12%;
+    width: 100%;
+    /* background-color:rgb(214, 192, 192); */
+    position: fixed;
+    padding: 10px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.logo{
+    padding: 10px;
+    margin-top: 12px;
+}
+
+.logo img{
+
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+}
+
+.other{
+    display: flex ;
+    color: #e0e0e0;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.other>div{
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.other>div:hover{
+    color: #000;
+    transition: .5s ease-in;
+    cursor: pointer;
+}
+/* --------------------------------------page1------------------------ */
+
+#page1>h3{
+    position: absolute;
+    top: 16%;
+    padding: 10px 50px 0px 40px;
+    font-size: 15px;
+    z-index: 99;
+    color: #e0e0e0;
+
+}
+
+#page1>h3:hover{
+    color: #000;
+    transition: .5s ease-in;
+
+}
+
+#page1>h4{
+    position: absolute;
+    top: 22%;
+    left: 83%;
+    color: #e0e0e0;
+}
+
+/* ---------------------------PAGE2--------------------------- */
+
+#page2>.about-left{
+    position: absolute;
+    top: 2%;
+    left: 5%;
+}
+#page2>.about-right{
+    position: absolute;
+    top: 20%;
+    left: 70%;
+}
+
+.about-left h1{
+    position: absolute;
+    font-size: 70px;
+    color: #e0e0e0;
+    -webkit-text-stroke: .6px #000;
+    
+}
+
+.about-right h3{ 
+    color: #e0e0e0;
+
+}
+
+
+/* -----------------------------page3--------------------------- */
+.project-heading>h1{
+    top: 10%;
+    left: 66%;
+    position: absolute;
+    font-size: 70px;
+    color: #e0e0e0;
+    -webkit-text-stroke: .6px #000;
+    
+}
+
+
+
+.project-image img{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.project-container{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+  
+    margin: auto;
+}
+
+.project-container::-webkit-scrollbar{
+    display: none;
+}
+
+#nextBtn{
+    width: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+
+#backBtn{
+    width: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+
+.project-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-items{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    padding: 10px;
+    flex: none;
+    margin: 10% auto;
+
+}
+
+.project {
+   /* top: 50%;
+    position: absolute; */
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+    margin-top: 200px;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    z-index: 1;
+
+
+}
+
+.project :hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* .project-1 { left: 0; }
+.project-2 { left: 340px; } 
+.project-3 { left: 680px; }
+.project-4 { left: 1020px; } */
+
+
+
+
+
+
+
+
+
+
