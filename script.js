@@ -8,12 +8,12 @@ let nextBtn = document.getElementById("nextBtn");
 
 // })
 
-document.addEventListener("keydown", (evt) => {
-    if (evt.key === "ArrowDown") {
-        evt.preventDefault();
-        scrollContainer.scrollLeft += 100; // Adjust the scroll distance as needed
-    }
-});
+// document.addEventListener("keydown", (evt) => {
+//     if (evt.key === "ArrowDown") {
+//         evt.preventDefault();
+//         scrollContainer.scrollLeft += 100; // Adjust the scroll distance as needed
+//     }
+// });
 
 
 function locomotive() {
@@ -476,15 +476,31 @@ gsap.to("#page3",{
         marker:true
     }
 })
-gsap.to("#page4",{
-    scrollTrigger:{
-        trigger:"#page4",
-        scroller:"#main",
-        start:"top top",
-        end:"bottom top",
-        scrub:1,
-        pin:true,
-        pinSpacing:false,
-        marker:true
+// Variable to track if horizontal scrolling is in progress
+let horizontalScrollingInProgress = false;
+
+// Event listener for arrow down key
+document.addEventListener("keydown", (evt) => {
+    if (evt.key === "ArrowDown" && !horizontalScrollingInProgress) {
+        evt.preventDefault();
+        horizontalScrollingInProgress = true;
+        // Start horizontal scrolling
+        gsap.to(scrollContainer, { scrollLeft: "+=200", onComplete: () => {
+            horizontalScrollingInProgress = false;
+            // After horizontal scrolling is complete, trigger the ScrollTrigger animation for #page4
+            gsap.to("#page4", {
+                scrollTrigger: {
+                    trigger: "#page4",
+                    scroller: "#main",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: false,
+                    pin: true,
+                    pinSpacing: false,
+                    enabled:true,
+                    marker: true
+                }
+            });
+        }});
     }
-})
+});

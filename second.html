@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Document</title>
+</head>
+<style>
+    .swiper {
+        width: 600px;
+        height: 300px;
+    }
+
+    .page{
+        height: 500px;
+        width: 100%;
+        background: #000;
+        
+    }
+    body{
+        overflow-y: hidden;
+    }
+    
+</style>
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+      
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <div class="page"></div>
+    Swiper CSS Styles/Size
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: false, // Disable looping
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+        let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+    const currentScroll = window.scrollY || window.pageYOffset;
+
+    if (currentScroll > lastScrollTop) {
+        swiper.slideNext();
+    } else {
+        swiper.slidePrev();
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+    </script>
+</body>
+</html>

@@ -33,21 +33,22 @@ html , body{
 
 }
 #page4{
+  
     height: 100vh;
     width: 100vw;
-    background-color: rgb(93, 179, 145);
+    background-color: rgb(214, 192, 192);
 
 }
 #page5{
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
-    background-color: rgb(93, 179, 145);
+    background-color:rgb(214, 192, 192) ;
 
 }
 #page6{
     height: 100vh;
     width: 100vw;
-    background-color: rgb(93, 179, 145);
+    background-color:  rgb(214, 192, 192) ;
 
 }
 
@@ -60,7 +61,7 @@ canvas{
 
 #loop{
     position: absolute;
-    top: 10%;
+    top: 7%;
     font-size: 65px;
     width: 100%;
     white-space: nowrap;
@@ -93,7 +94,7 @@ canvas{
 
 /* ---------------------------------navbar--------------------------- */
 #nav{
-    height: 12%;
+    height: 2%;
     width: 100%;
     /* background-color:rgb(214, 192, 192); */
     position: fixed;
@@ -139,7 +140,7 @@ canvas{
 
 #page1>h3{
     position: absolute;
-    top: 16%;
+    top: 12%;
     padding: 10px 50px 0px 40px;
     font-size: 15px;
     z-index: 99;
@@ -240,6 +241,7 @@ canvas{
 .project-items{
     position: relative;
     width: 100%;
+    height: 400px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 30px;
@@ -254,7 +256,7 @@ canvas{
     position: absolute; */
     filter: grayscale(100%);
     transition: transform 0.5s;
-    margin-top: 200px;
+    margin-top: 100px;
     width: 100%;
     height: 300px;
     padding: 20px;
@@ -277,6 +279,256 @@ canvas{
 
 
 
+/* -----------------------PAGE4----------------------- */
+
+
+
+#page4{
+    position: relative;
+}
+
+#page4>h1{
+    position: absolute;
+    font-size: 70px;
+    color: #e0e0e0;
+    -webkit-text-stroke: .6px #000;
+    top: 15%;
+    left: 6%;
+
+}
+.scroll-div {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  height: 100px;
+  white-space: nowrap;
+  overflow: hidden; 
+
+}
+
+.scroll-div h2{
+    display: inline-block;
+    font-size: 65px;
+    white-space: nowrap;
+    /* transform: rotate(-10deg); */
+    background-color: #e0e0e0;
+    animation-name: scroll2;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color: rgb(214, 192, 192) ;
+}
+.scroll-div2 {
+  position: absolute;
+  top: 65%;
+  width: 200%;
+  height: 100px;
+  white-space: nowrap;
+  background-color: #e0e0e0;
+  transform: rotate(2deg);
+  animation: scroll 3s linear infinite ;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll-div2 .skill-image{
+    display: inline-block;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+
+.skill-image img{
+    padding: 5px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.scroll-div3 {
+  position: absolute;
+  top: 85%;
+  width: 100%;
+ height: 100%;
+  white-space: nowrap;
+  letter-spacing: 3px;
+}
+
+.scroll-div3::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll-div3 h2{
+    display: inline-block;
+    font-size: 60px;
+    margin-right: 50px;
+    transform: rotate(-10deg);
+    background-color: #e0e0e0; 
+    color: rgb(214, 192, 192) ;
+    animation-name: scroll;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes scroll {
+    0%{
+
+        transform: translateX(0);
+    }
+    100%{
+          transform: translateX(calc(-100));
+    }
+}
+@keyframes scroll2 {
+    0%{
+
+        transform: translateX(0);
+    }
+    100%{
+          transform: translateX(-50%);
+    }
+}
+
+/* -----------------------PAGE5--------------------------------- */
+#page5{
+    position: relative;
+}
+#page5>h1{
+    position: absolute;
+    font-size: 65px;
+    color: #e0e0e0;
+    -webkit-text-stroke: .6px #000;
+    top: 5%;
+    right: 4%;
+
+}
+.oasis-container{
+    position: absolute;
+    width: 450px;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    top: 25%;
+    border: 1px solid rgb(161, 140, 140);
+    left: 3%;
+    list-style: none;
+    color: rgb(161, 140, 140);
+    /* padding: 10px; */
+}
+.oasis-container li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.uwsi-container{
+    position: absolute;
+    width: 450px;
+    height: 220px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    top: 50%;
+    border: 1px solid rgb(161, 140, 140);
+    left: 3%;
+    list-style: none;
+    color: rgb(161, 140, 140);
+   /* padding: 10px; */
+
+}
+.uwsi-container li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+
+
+.content{
+    padding: 20px 10px;
+}
+
+/* #page5 .right-side{
+    position: absolute;
+    right: -99%;
+    
+} */
+
+
+.exp-image img{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    height: 200px;
+    width: 200px;
+}
+.exp-image2 img{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    height: 200px;
+    width: 200px;
+}
+.exp-image3 img{
+    position: absolute;
+    top: 70%;
+    right: 10%;
+    height: 200px;
+    width: 200px;
+}
+.exp-image4 img{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    height: 200px;
+    width: 200px;
+}
+
+
+
+.overlay{
+    font-size: 160px;
+    position: absolute;
+    top: 20%;
+    right: 14%;
+}
+
+
+/* -----------------------PAGE6----------------------- */
+
+#page6{
+    position: relative;
+}
+
+#page6>h1{
+    position: absolute;
+    font-size: 70px;
+    color: #e0e0e0;
+    -webkit-text-stroke: .6px #000;
+    top: 15%;
+    left: 6%;
+
+}
+
+.social-icons{
+    display: flex;
+}
+
+.social-image{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    margin-top: 250px;
+}
+.social-image img{
+    position: absolute;
+    height: 250px;
+    padding: 20px;
+    width: 250px;
+    z-index: 9999999999999999999999999999999;
+}
 
 
 
