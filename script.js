@@ -2,22 +2,22 @@ let scrollContainer = document.querySelector(".project-container");
 let backBtn = document.getElementById("backBtn");
 let nextBtn = document.getElementById("nextBtn");
 
-// scrollContainer.addEventListener("wheel",(evt)=>{
-//     evt.preventDefault();
-//     scrollContainer.scrollLeft += evt.deltaY;
+scrollContainer.addEventListener("wheel",(evt)=>{
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
 
-// })
+})
 
-// document.addEventListener("keydown", (evt) => {
-//     if (evt.key === "ArrowDown") {
-//         evt.preventDefault();
-//         scrollContainer.scrollLeft += 100; // Adjust the scroll distance as needed
-//     }
-// });
-
+document.addEventListener("keydown", (evt) => {
+    if (evt.key === "ArrowDown") {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += 100; // Adjust the scroll distance as needed
+    }
+});
+gsap.registerPlugin(ScrollTrigger);
 
 function locomotive() {
-    gsap.registerPlugin(ScrollTrigger);
+   
   
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("#main"),
@@ -476,31 +476,47 @@ gsap.to("#page3",{
         marker:true
     }
 })
-// Variable to track if horizontal scrolling is in progress
-let horizontalScrollingInProgress = false;
 
-// Event listener for arrow down key
-document.addEventListener("keydown", (evt) => {
-    if (evt.key === "ArrowDown" && !horizontalScrollingInProgress) {
-        evt.preventDefault();
-        horizontalScrollingInProgress = true;
-        // Start horizontal scrolling
-        gsap.to(scrollContainer, { scrollLeft: "+=200", onComplete: () => {
-            horizontalScrollingInProgress = false;
-            // After horizontal scrolling is complete, trigger the ScrollTrigger animation for #page4
-            gsap.to("#page4", {
-                scrollTrigger: {
-                    trigger: "#page4",
-                    scroller: "#main",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: false,
-                    pin: true,
-                    pinSpacing: false,
-                    enabled:true,
-                    marker: true
-                }
-            });
-        }});
+
+const project = document.querySelector(".project");
+const projectWidth = project.offsetWidth;
+const amountToScroll = projectWidth - window.innerWidth;
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tween = gsap.to(project, {
+    x: -amountToScroll,
+    ease: "none"
+});
+
+ScrollTrigger.create({
+    trigger: ".project-items",
+    start: "center center",
+    end: "+=" + amountToScroll,
+    pin: true,
+    animation: tween,
+    scrub: 1,
+    invalidateOnRefresh: true,
+    markers: true,
+    onUpdate: self => {
+        if (self.direction === -1) { // Scroll up
+            tween.vars.x = 0; // Reverse the animation direction
+        } else {
+            tween.vars.x = -amountToScroll; // Restore the original animation direction
+        }
     }
 });
+
+
+
+const lenis = new Lenis()
+         function raf(time) {
+         lenis.raf(time)
+         requestAnimationFrame(raf)
+     }
+    requestAnimationFrame(raf)
+
+
+
+
+

@@ -17,38 +17,38 @@ html , body{
 #page1{
     height: 100vh;
     width: 100vw;
-    background-color: rgb(214, 192, 192);
+    background-color:black;
 
 }
 #page2{
     height: 100vh;
     width: 100vw;
-    background-color:rgb(214, 192, 192);
+    background-color:black;
 
 }
 #page3{
     height: 100vh;
     width: 100vw;
-    background-color:rgb(214, 192, 192);
+    background-color:black;
 
 }
 #page4{
   
     height: 100vh;
     width: 100vw;
-    background-color: rgb(214, 192, 192);
+    background-color:black;
 
 }
 #page5{
     height: 200vh;
     width: 100vw;
-    background-color:rgb(214, 192, 192) ;
+    background-color:black ;
 
 }
 #page6{
     height: 100vh;
     width: 100vw;
-    background-color:  rgb(214, 192, 192) ;
+    background-color: black ;
 
 }
 
@@ -66,7 +66,7 @@ canvas{
     width: 100%;
     white-space: nowrap;
     color:#e0e0e0;
-    background-color: rgb(214, 192, 192);
+    background-color:black;
    
 }
 
@@ -96,7 +96,7 @@ canvas{
 #nav{
     height: 2%;
     width: 100%;
-    /* background-color:rgb(214, 192, 192); */
+    /* background-color:black; */
     position: fixed;
     padding: 10px;
     z-index: 99;
@@ -239,7 +239,7 @@ canvas{
 }
 
 .project-items{
-    position: relative;
+    /* position: relative;
     width: 100%;
     height: 400px;
     display: grid;
@@ -247,21 +247,35 @@ canvas{
     grid-gap: 30px;
     padding: 10px;
     flex: none;
-    margin: 10% auto;
+    margin: 10% auto; */
+
+    height: 100vh;
+    min-height: 30em;
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
 
 }
 
 .project {
    /* top: 50%;
     position: absolute; */
-    filter: grayscale(100%);
+    /* filter: grayscale(100%);
     transition: transform 0.5s;
     margin-top: 100px;
     width: 100%;
     height: 300px;
     padding: 20px;
     background-color: #f9f9f9;
-    z-index: 1;
+    z-index: 1; */
+
+    width: 50vw;
+  min-width: 25em;
+  max-width: 35em;
+  height: 80vh;
+  object-fit: cover;
+  padding: 0 2em;
+  
 
 
 }
@@ -316,7 +330,7 @@ canvas{
     animation-duration: 6s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    color: rgb(214, 192, 192) ;
+    color:black ;
 }
 .scroll-div2 {
   position: absolute;
@@ -367,7 +381,7 @@ canvas{
     margin-right: 50px;
     transform: rotate(-10deg);
     background-color: #e0e0e0; 
-    color: rgb(214, 192, 192) ;
+    color:black ;
     animation-name: scroll;
     animation-duration: 6s;
     animation-timing-function: linear;

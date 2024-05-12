@@ -71,3 +71,25 @@ window.addEventListener("scroll", function() {
     </script>
 </body>
 </html>
+
+
+const projectitem = document.querySelector(".project-items");
+let projectitemWidth = projectitem.offsetWidth;
+let amountToScroll = projectitemWidth - window.innerWidth;
+
+const tween = gsap.to(projectitem,{
+    x: -amountToScroll,
+    duration: 3,
+    ease : "none"
+});
+
+ScrollTrigger.create({
+    trigger:".project-container",
+    start: "top 20%",
+    end: "+=" +amountToScroll,
+    pin: true,
+    animation:tween,
+    scrub:1,
+    markers:true
+
+})
