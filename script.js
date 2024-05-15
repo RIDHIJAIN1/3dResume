@@ -478,45 +478,67 @@ gsap.to("#page3",{
 })
 
 
-const project = document.querySelector(".project");
-const projectWidth = project.offsetWidth;
-const amountToScroll = projectWidth - window.innerWidth;
+// const project = document.querySelector(".project");
+// const projectWidth = project.offsetWidth;
+// const amountToScroll = projectWidth - window.innerWidth;
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-const tween = gsap.to(project, {
-    x: -amountToScroll,
-    ease: "none"
+// const tween = gsap.to(project, {
+//     x: -amountToScroll,
+//     ease: "none"
+// });
+
+// ScrollTrigger.create({
+//     trigger: ".project-items",
+//     start: "center center",
+//     end: "+=" + amountToScroll,
+//     pin: true,
+//     animation: tween,
+//     scrub: 1,
+//     invalidateOnRefresh: true,
+//     markers: true,
+//     onUpdate: self => {
+//         if (self.direction === -1) { // Scroll up
+//             tween.vars.x = 0; // Reverse the animation direction
+//         } else {
+//             tween.vars.x = -amountToScroll; // Restore the original animation direction
+//         }
+//     }
+// });
+
+
+
+// const lenis = new Lenis()
+//          function raf(time) {
+//          lenis.raf(time)
+//          requestAnimationFrame(raf)
+//      }
+//     requestAnimationFrame(raf)
+
+document.getElementById("downloadButton").addEventListener("click", function() {
+    // Replace "path/to/cv.pdf" with the actual path to your CV file
+    var cvUrl = "resume/FullStackDev.docx";
+    
+    // Create a temporary anchor element
+    var tempLink = document.createElement("a");
+    tempLink.href = cvUrl;
+    
+    // Set the download attribute to force download
+    tempLink.setAttribute("download", "FullStackDev.docx");
+    
+    // Hide the anchor element
+    tempLink.style.display = "none";
+    
+    // Append the anchor element to the document body
+    document.body.appendChild(tempLink);
+    
+    // Trigger the click event to start the download
+    tempLink.click();
+    
+    // Clean up
+    document.body.removeChild(tempLink);
 });
-
-ScrollTrigger.create({
-    trigger: ".project-items",
-    start: "center center",
-    end: "+=" + amountToScroll,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-    invalidateOnRefresh: true,
-    markers: true,
-    onUpdate: self => {
-        if (self.direction === -1) { // Scroll up
-            tween.vars.x = 0; // Reverse the animation direction
-        } else {
-            tween.vars.x = -amountToScroll; // Restore the original animation direction
-        }
-    }
-});
-
-
-
-const lenis = new Lenis()
-         function raf(time) {
-         lenis.raf(time)
-         requestAnimationFrame(raf)
-     }
-    requestAnimationFrame(raf)
-
-
 
 
 

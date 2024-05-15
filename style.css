@@ -17,38 +17,40 @@ html , body{
 #page1{
     height: 100vh;
     width: 100vw;
-    background-color:black;
+    background-color:#ccafac;
 
 }
 #page2{
     height: 100vh;
     width: 100vw;
-    background-color:black;
+    background-color:#ccafac;
 
 }
 #page3{
     height: 100vh;
     width: 100vw;
-    background-color:black;
+    background-color:#ccafac;
+    /* padding-bottom: 200px; */
 
 }
 #page4{
-  
+     margin-top: 500px;
     height: 100vh;
     width: 100vw;
-    background-color:black;
+    background-color:#ccafac;
 
 }
 #page5{
+    padding-top: 100px;
     height: 200vh;
     width: 100vw;
-    background-color:black ;
+    background-color:#ccafac ;
 
 }
 #page6{
     height: 100vh;
     width: 100vw;
-    background-color: black ;
+    background-color: #ccafac  ;
 
 }
 
@@ -61,12 +63,13 @@ canvas{
 
 #loop{
     position: absolute;
-    top: 7%;
+    top: 6%;
     font-size: 65px;
     width: 100%;
     white-space: nowrap;
     color:#e0e0e0;
-    background-color:black;
+    background-color: #ccafac;
+    
    
 }
 
@@ -75,6 +78,8 @@ canvas{
     animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    
+    
 
 }
 #loop>h1>span{
@@ -125,22 +130,50 @@ canvas{
     text-align: center;
 }
 
-.other>div{
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.other>div:hover{
-    color: #000;
-    transition: .5s ease-in;
-    cursor: pointer;
-}
+button {
+    font-size: 16px;
+    position: relative;
+    margin: auto;
+    padding: 1em 2.5em 1em 2.5em;
+    border: none;
+    background: #e0e0e0;
+    transition: all 0.1s linear;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+   }
+   
+   button:active {
+    transform: scale(0.95);
+   }
+   
+   button span {
+    color: #464646;
+   }
+   
+   button .border {
+    position: absolute;
+    border: 0.15em solid #e0e0e0;
+    transition: all 0.3s 0.08s linear;
+    top: 50%;
+    left: 50%;
+    width: 11em;
+    height: 3em;
+    transform: translate(-50%, -50%);
+   }
+   
+   button:hover .border {
+    display: block;
+    width: 13em;
+    height: 3.7em;
+   }
+   
+   .full-rounded {
+    border-radius: 2em;
+   }
 /* --------------------------------------page1------------------------ */
 
 #page1>h3{
     position: absolute;
-    top: 12%;
+    top: 10%;
     padding: 10px 50px 0px 40px;
     font-size: 15px;
     z-index: 99;
@@ -165,18 +198,19 @@ canvas{
 
 #page2>.about-left{
     position: absolute;
-    top: 2%;
+
+    top: 20%;
     left: 5%;
 }
 #page2>.about-right{
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 70%;
 }
 
 .about-left h1{
     position: absolute;
-    font-size: 70px;
+    font-size: 60px;
     color: #e0e0e0;
     -webkit-text-stroke: .6px #000;
     
@@ -189,11 +223,13 @@ canvas{
 
 
 /* -----------------------------page3--------------------------- */
+
+
 .project-heading>h1{
     top: 10%;
     left: 66%;
     position: absolute;
-    font-size: 70px;
+    font-size: 60px;
     color: #e0e0e0;
     -webkit-text-stroke: .6px #000;
     
@@ -208,11 +244,14 @@ canvas{
 }
 
 .project-container{
-    width: 900px;
+    width: 100%;
     display: flex;
-    overflow-x: scroll;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* overflow-x: scroll;
     align-items: center;
-  
+   */
+   padding: 50px;
     margin: auto;
 }
 
@@ -239,43 +278,57 @@ canvas{
 }
 
 .project-items{
-    /* position: relative;
-    width: 100%;
+    position: relative;
+  justify-content: space-between;
+  width: calc(35% - 5px); 
+  margin-bottom: 10px;
     height: 400px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 30px;
+    /* margin: auto; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* display: grid; */
+    /* grid-template-columns: auto auto auto; */
+    /* grid-gap: 30px; */
     padding: 10px;
-    flex: none;
-    margin: 10% auto; */
+    /* flex: 1; */
+  
 
-    height: 100vh;
+    /* height: 100vh;
     min-height: 30em;
     width: fit-content;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; */
 
+}
+
+.project-1{
+    margin-right: 100px;
 }
 
 .project {
    /* top: 50%;
     position: absolute; */
-    /* filter: grayscale(100%);
+    filter: grayscale(100%);
     transition: transform 0.5s;
+    border-radius: 20px;
+    opacity: .9;
+    /* margin-top: 100px; */
     margin-top: 100px;
     width: 100%;
     height: 300px;
     padding: 20px;
-    background-color: #f9f9f9;
-    z-index: 1; */
+    /* background-color: #f9f9f9; */
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
-    width: 50vw;
+    /* width: 50vw;
   min-width: 25em;
   max-width: 35em;
   height: 80vh;
   object-fit: cover;
   padding: 0 2em;
-  
+   */
 
 
 }
@@ -290,7 +343,10 @@ canvas{
 .project-2 { left: 340px; } 
 .project-3 { left: 680px; }
 .project-4 { left: 1020px; } */
-
+.project-image img{
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
 
 
 /* -----------------------PAGE4----------------------- */
@@ -421,34 +477,81 @@ canvas{
     right: 4%;
 
 }
+
+.card {
+    width: 300px;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: 40px;
+    background-color: rgba(39, 37, 37, 0.253);
+    box-shadow: inset 10px 10px 10px 10px rgb(75, 74, 74),
+      inset 20px 20px 20px 20px rgba(8, 7, 7, 0.1),
+      10px 10px 20px rgba(0, 0, 0, 0.425),
+      inset -10px -10px 10px 10px rgba(41, 40, 40, 0.568),
+      inset -20px -20px 20px 20px rgba(41, 40, 40, 0.568);
+    border-radius: 51% 49% 62% 38% / 25% 57% 43% 75%;
+    position: relative;
+  }
+  
+  .card::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.329);
+    box-shadow: 0 0 50px rgb(226, 226, 226);
+    border-radius: 80% 20% 91% 9% / 48% 67% 33% 52%;
+    top: 50px;
+    left: 40px;
+  }
+  
+  .card::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.315);
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    border-radius: 48% 52% 45% 55% / 48% 67% 33% 52%;
+    top: 40px;
+    left: 60px;
+  }
+  
+
 .oasis-container{
     position: absolute;
     width: 450px;
     height: 200px;
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
     border-radius: 10px;
     top: 25%;
-    border: 1px solid rgb(161, 140, 140);
+    /* border: 1px solid rgb(161, 140, 140); */
     left: 3%;
     list-style: none;
-    color: rgb(161, 140, 140);
+    color: #e0e0e0;
     /* padding: 10px; */
 }
 .oasis-container li{
     list-style: none;
     margin-bottom: 10px;
 }
+
+
+
+
 .uwsi-container{
     position: absolute;
-    width: 450px;
+    width: 500px;
     height: 220px;
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
     border-radius: 10px;
-    top: 50%;
-    border: 1px solid rgb(161, 140, 140);
-    left: 3%;
+    top: 28%;
+    /* border: 1px solid rgb(161, 140, 140); */
+    left: 70%;
     list-style: none;
-    color: rgb(161, 140, 140);
+    color: #e0e0e0;
    /* padding: 10px; */
 
 }
@@ -461,6 +564,10 @@ canvas{
 
 .content{
     padding: 20px 10px;
+}
+
+.uwsi-container .content{
+    padding-top: 70px;
 }
 
 /* #page5 .right-side{
