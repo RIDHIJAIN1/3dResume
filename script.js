@@ -1,19 +1,4 @@
-let scrollContainer = document.querySelector(".project-container");
-let backBtn = document.getElementById("backBtn");
-let nextBtn = document.getElementById("nextBtn");
 
-scrollContainer.addEventListener("wheel",(evt)=>{
-    evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
-
-})
-
-document.addEventListener("keydown", (evt) => {
-    if (evt.key === "ArrowDown") {
-        evt.preventDefault();
-        scrollContainer.scrollLeft += 100; // Adjust the scroll distance as needed
-    }
-});
 gsap.registerPlugin(ScrollTrigger);
 
 function locomotive() {
@@ -440,18 +425,7 @@ window.addEventListener(
     })
 
 
-// gsap.to("#page1",{
-//     scrollTrigger:{
-//         trigger:"#page1",
-//         scroller:"#main",
-//         start:"top top",
-//         end:"bottom top",
-//         scrub:1,
-//         pin:true,
-//         pinSpacing:false,
-//         marker:true
-//     }
-// })
+
 gsap.to("#page2",{
     scrollTrigger:{
         trigger:"#page2",
@@ -476,48 +450,72 @@ gsap.to("#page3",{
         marker:true
     }
 })
-
-
-// const project = document.querySelector(".project");
-// const projectWidth = project.offsetWidth;
-// const amountToScroll = projectWidth - window.innerWidth;
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const tween = gsap.to(project, {
-//     x: -amountToScroll,
-//     ease: "none"
-// });
-
-// ScrollTrigger.create({
-//     trigger: ".project-items",
-//     start: "center center",
-//     end: "+=" + amountToScroll,
-//     pin: true,
-//     animation: tween,
-//     scrub: 1,
-//     invalidateOnRefresh: true,
-//     markers: true,
-//     onUpdate: self => {
-//         if (self.direction === -1) { // Scroll up
-//             tween.vars.x = 0; // Reverse the animation direction
-//         } else {
-//             tween.vars.x = -amountToScroll; // Restore the original animation direction
-//         }
+gsap.to("#page7",{
+    scrollTrigger:{
+        trigger:"#page7",
+        scroller:"#main",
+        start:"top top",
+        end:"bottom top",
+        scrub:1,
+        pin:true,
+        pinSpacing:false,
+        marker:true
+    }
+})
+gsap.to("#page8",{
+    scrollTrigger:{
+        trigger:"#page8",
+        scroller:"#main",
+        start:"top top",
+        end:"bottom top",
+        scrub:1,
+        pin:true,
+        pinSpacing:false,
+        marker:true
+    }
+})
+// gsap.to("#page4",{
+//     scrollTrigger:{
+//         trigger:"#page4",
+//         scroller:"#main",
+//         start:"top top",
+//         end:"bottom top",
+//         scrub:1,
+//         pin:true,
+//         pinSpacing:false,
+//         marker:true
 //     }
-// });
+// })
 
 
+// gsap.to("#page5",{
+//     scrollTrigger:{
+//         trigger:"#page5",
+//         scroller:"#main",
+//         start:"top top",
+//         end:"bottom top",
+//         scrub:1,
+//         pin:true,
+//         pinSpacing:false,
+//         marker:true
+//     }
+// })
+// gsap.to("#page6",{
+//     scrollTrigger:{
+//         trigger:"#page6",
+//         scroller:"#main",
+//         start:"top top",
+//         end:"bottom top",
+//         scrub:1,
+//         pin:true,
+//         pinSpacing:false,
+//         marker:true
+//     }
+// })
 
-// const lenis = new Lenis()
-//          function raf(time) {
-//          lenis.raf(time)
-//          requestAnimationFrame(raf)
-//      }
-//     requestAnimationFrame(raf)
 
 document.getElementById("downloadButton").addEventListener("click", function() {
-    // Replace "path/to/cv.pdf" with the actual path to your CV file
+   
     var cvUrl = "resume/FullStackDev.docx";
     
     // Create a temporary anchor element
