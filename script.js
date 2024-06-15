@@ -523,7 +523,7 @@ document.getElementById("downloadButton").addEventListener("click", function() {
     tempLink.href = cvUrl;
     
     // Set the download attribute to force download
-    tempLink.setAttribute("download", "FullStackDev.docx");
+    tempLink.setAttribute("download", "Ridhi_Jain_Resume.pdf");
     
     // Hide the anchor element
     tempLink.style.display = "none";

@@ -446,6 +446,7 @@ button {
   margin-bottom: 10px;
     height: 400px;
       padding: 10px;
+      
     /* margin: auto; */
     display: flex;
     align-items: center;
@@ -472,7 +473,7 @@ button {
 .project {
    /* top: 50%;
     position: absolute; */
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     transition: transform 0.5s;
     border-radius: 20px;
     opacity: .9;
@@ -496,11 +497,11 @@ button {
 
 }
 
-.project :hover{
+/* .project :hover{
     filter: grayscale(0);
     cursor: pointer;
     transform: scale(1.1);
-}
+} */
 
 .project-content{
     margin-top: 20px;
@@ -512,7 +513,10 @@ button {
 .project-4 { left: 1020px; } */
 .project-image img{
     border-radius: 20px;
-    margin-bottom: 20px;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999999999999999999999999999;
+  
 }
 
 .project-image{
@@ -521,7 +525,7 @@ button {
     justify-content: center;
     margin: auto;
     height: 180px;
-    padding-top: 60px;
+  
     background-color: #000;
     border-radius: 20px;
 }
