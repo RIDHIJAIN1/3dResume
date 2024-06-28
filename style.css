@@ -217,13 +217,14 @@ button {
 
 #page2>.about-left{
     position: absolute;
-
-    top: 20%;
+    z-index: 99;
+    top: 15%;
     left: 5%;
 }
 #page2>.about-right{
     position: absolute;
-    top: 30%;
+    z-index: 99;
+    top: 18%;
     left: 70%;
 }
 
@@ -243,150 +244,17 @@ button {
 
 /* -----------------------------page3--------------------------- */
 
-.loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    --color: hsl(0, 0%, 87%);
-    --animation: 2s ease-in-out infinite;
-  }
-  
-  .loader .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border: solid 2px var(--color);
-    border-radius: 50%;
-    margin: 0 10px;
-    background-color: transparent;
-    animation: circle-keys var(--animation);
-  }
-  
-  .loader .circle .dot {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: var(--color);
-    animation: dot-keys var(--animation);
-  }
-  
-  .loader .circle .outline {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    animation: outline-keys var(--animation);
-  }
-  
-  .circle:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-  
-  .circle:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  .circle:nth-child(4) {
-    animation-delay: 0.9s;
-  }
-  
-  .circle:nth-child(5) {
-    animation-delay: 1.2s;
-  }
-  
-  .circle:nth-child(2) .dot {
-    animation-delay: 0.3s;
-  }
-  
-  .circle:nth-child(3) .dot {
-    animation-delay: 0.6s;
-  }
-  
-  .circle:nth-child(4) .dot {
-    animation-delay: 0.9s;
-  }
-  
-  .circle:nth-child(5) .dot {
-    animation-delay: 1.2s;
-  }
-  
-  .circle:nth-child(1) .outline {
-    animation-delay: 0.9s;
-  }
-  
-  .circle:nth-child(2) .outline {
-    animation-delay: 1.2s;
-  }
-  
-  .circle:nth-child(3) .outline {
-    animation-delay: 1.5s;
-  }
-  
-  .circle:nth-child(4) .outline {
-    animation-delay: 1.8s;
-  }
-  
-  .circle:nth-child(5) .outline {
-    animation-delay: 2.1s;
-  }
-  
-  @keyframes circle-keys {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  
-    50% {
-      transform: scale(1.5);
-      opacity: 0.5;
-    }
-  
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes dot-keys {
-    0% {
-      transform: scale(1);
-    }
-  
-    50% {
-      transform: scale(0);
-    }
-  
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes outline-keys {
-    0% {
-      transform: scale(0);
-      outline: solid 20px var(--color);
-      outline-offset: 0;
-      opacity: 1;
-    }
-  
-    100% {
-      transform: scale(1);
-      outline: solid 0 transparent;
-      outline-offset: 20px;
-      opacity: 0;
-    }
-  }
+#page3{
+  position: relative;
+}
+
+
 
 .project-heading>h1{
     top: 10%;
     left: 66%;
     position: absolute;
+    z-index: 99;
     font-size: 60px;
     color: #e0e0e0;
     -webkit-text-stroke: .6px #000;
@@ -430,23 +298,21 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* overflow-x: scroll;
-    align-items: center;
-    
-   */
+   
    align-items: center;
-   padding: 50px;
+   padding-top: 150px;
     margin: auto;
 }
 
 .project-items{
-    position: relative;
+    position: absolute;
+    z-index: 99;
   justify-content: space-between;
   width: calc(100% - 5px); 
   margin-bottom: 10px;
     height: 400px;
-      padding: 10px;
-      
+      padding: 40px;
+      margin-top: 450px;
     /* margin: auto; */
     display: flex;
     align-items: center;
@@ -466,9 +332,7 @@ button {
 
 }
 
-.project-1{
-    margin-right: 100px;
-}
+
 
 .project {
    /* top: 50%;
@@ -476,7 +340,7 @@ button {
     /* filter: grayscale(100%); */
     transition: transform 0.5s;
     border-radius: 20px;
-    opacity: .9;
+    /* opacity: .9; */
     /* margin-top: 100px; */
     margin-top: 100px;
     width: 400px;
@@ -574,7 +438,7 @@ button {
   position: absolute;
   top: 65%;
   width: 200%;
-  height: 100px;
+  /* height: 100px; */
   white-space: nowrap;
   background-color: #e0e0e0;
   transform: rotate(2deg);
@@ -661,6 +525,20 @@ button {
 }
 
 .card {
+    width: 300px;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: 40px;
+    background-color: rgba(39, 37, 37, 0.253);
+    box-shadow: inset 10px 10px 10px 10px rgb(75, 74, 74),
+      inset 20px 20px 20px 20px rgba(8, 7, 7, 0.1),
+      10px 10px 20px rgba(0, 0, 0, 0.425),
+      inset -10px -10px 10px 10px rgba(41, 40, 40, 0.568),
+      inset -20px -20px 20px 20px rgba(41, 40, 40, 0.568);
+    border-radius: 51% 49% 62% 38% / 25% 57% 43% 75%;
+    position: relative;
+  }
+.ucard {
     width: 300px;
     height: 300px;
     margin-top: 100px;
@@ -806,6 +684,7 @@ button {
 
 #page6>h1{
     position: absolute;
+    z-index: 99;
     font-size: 70px;
     color: #e0e0e0;
     -webkit-text-stroke: .6px #000;
@@ -816,9 +695,11 @@ button {
 
 .social-icons{
     display: flex;
-    text-align: center;
+   
     align-items: center;
     justify-content: center;
+  
+
 }
 
 .social-image{
@@ -826,10 +707,11 @@ button {
     height: 250px;
     width: 250px;
     /* text-align: center; */
-    margin-top: 250px;
+    /* margin-top: 250px; */
 }
 .social-image img{
-    /* position: absolute; */
+  top: 40%;
+    position: absolute;
     height: 250px;
     padding: 20px;
     width: 250px;
@@ -837,8 +719,154 @@ button {
 }
 
 
+@media only screen and (max-width: 480px) {
+
+  #page2>.about-left{
+    position: absolute;
+    z-index: 99;
+    top: 16%;
+    left: 5%;
+}
+#page2>.about-right{
+    position: absolute;
+    z-index: 99;
+    top: 20%;
+    padding: 20px;
+    left: auto;
+}
+
+.project-heading>h1 {
+  top: 25%;
+  left: auto;
+  position: absolute;
+  font-size: 60px;
+  color: #e0e0e0;
+  -webkit-text-stroke: .6px #000;
+  z-index: 99;
+  margin-top: 80px;
+  padding: 20px;
+
+}
+
+.project-items {
+  position: absolute;
+
+  z-index: 99;
+  justify-content: space-between;
+  width: calc(100% - 5px);
+   margin-top: 450px;
+  padding: 102px;
+
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-gap: 30px;
+
+}
+
+.project{
+  width: 350px;
+}
+
+#page4>h1 {
+  position: absolute;
+  z-index: 99;
+  font-size: 70px;
+  color: #e0e0e0;
+  -webkit-text-stroke: .6px #000;
+  top: 30%;
+  left: 18%;
+}
+
+.scroll-div{
+  top: 50%;
+}
+
+.scroll-div h2{
+  font-size: 60px;
+  z-index: 99;
+  position: absolute;
+}
+
+.scroll-div2{
+  z-index: 99;
+  animation-name: scroll2;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroll-div3{
+z-index: 99;
+animation-name: scroll2;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 
 
 
 
+#page5 h1{
+  z-index: 99;
+  top: 25%;
+  right: 2%;
+  font-size: 60px;
+}
 
+.card{
+  position: absolute;
+  z-index: 99;
+  top: 40%;
+
+}
+
+.oasis-container{
+  z-index: 99;
+  top: 55%;
+}
+
+.ucard{
+  width: 300px;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: 40px;
+  background-color: rgba(39, 37, 37, 0.253);
+  box-shadow: inset 10px 10px 10px 10px rgb(75, 74, 74),
+    inset 20px 20px 20px 20px rgba(8, 7, 7, 0.1),
+    10px 10px 20px rgba(0, 0, 0, 0.425),
+    inset -10px -10px 10px 10px rgba(41, 40, 40, 0.568),
+    inset -20px -20px 20px 20px rgba(41, 40, 40, 0.568);
+  border-radius: 51% 49% 62% 38% / 25% 57% 43% 75%;
+  position: absolute;
+  z-index: 99;
+  top: 245%;
+ 
+}
+
+.uwsi-container{
+  left: 0%;
+}
+
+#page6 h1{
+  z-index: 99;
+  top: 25%;
+}
+
+.social-icons {
+  position: absolute;
+  top: 35%;
+  left: 18%;
+  display: block;
+
+}
+
+#page6{
+  height: 200vh;
+}
+
+.social-image{
+  position: relative;
+}
+
+}

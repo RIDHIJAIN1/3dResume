@@ -434,8 +434,10 @@ gsap.to("#page2",{
         end:"bottom top",
         scrub:1,
         pin:true,
+        pinType:false,
         pinSpacing:false,
-        marker:true
+        marker:true,
+        transform: none
     }
 })
 gsap.to("#page3",{
@@ -447,7 +449,9 @@ gsap.to("#page3",{
         scrub:1,
         pin:true,
         pinSpacing:false,
-        marker:true
+        marker:true,
+        transform: none
+
     }
 })
 gsap.to("#page7",{
@@ -474,44 +478,44 @@ gsap.to("#page8",{
         marker:true
     }
 })
-// gsap.to("#page4",{
-//     scrollTrigger:{
-//         trigger:"#page4",
-//         scroller:"#main",
-//         start:"top top",
-//         end:"bottom top",
-//         scrub:1,
-//         pin:true,
-//         pinSpacing:false,
-//         marker:true
-//     }
-// })
+gsap.to("#page4",{
+    scrollTrigger:{
+        trigger:"#page4",
+        scroller:"#main",
+        start:"top top",
+        end:"bottom top",
+        scrub:1,
+        pin:true,
+        pinSpacing:false,
+        marker:true
+    }
+})
 
 
-// gsap.to("#page5",{
-//     scrollTrigger:{
-//         trigger:"#page5",
-//         scroller:"#main",
-//         start:"top top",
-//         end:"bottom top",
-//         scrub:1,
-//         pin:true,
-//         pinSpacing:false,
-//         marker:true
-//     }
-// })
-// gsap.to("#page6",{
-//     scrollTrigger:{
-//         trigger:"#page6",
-//         scroller:"#main",
-//         start:"top top",
-//         end:"bottom top",
-//         scrub:1,
-//         pin:true,
-//         pinSpacing:false,
-//         marker:true
-//     }
-// })
+gsap.to("#page5",{
+    scrollTrigger:{
+        trigger:"#page5",
+        scroller:"#main",
+        start:"top top",
+        end:"bottom top",
+        scrub:1,
+        pin:true,
+        pinSpacing:false,
+        marker:true
+    }
+})
+gsap.to("#page6",{
+    scrollTrigger:{
+        trigger:"#page6",
+        scroller:"#main",
+        start:"top top",
+        end:"bottom top",
+        scrub:1,
+        pin:true,
+        pinSpacing:false,
+        marker:true
+    }
+})
 
 
 document.getElementById("downloadButton").addEventListener("click", function() {
